@@ -10,6 +10,11 @@
 
 
 /* ---- Base Rules ---- */
+/* Added smooth scrolling behavior and revised background gradient to match the theme of the content */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: linear-gradient(0deg, white,black,darkgray,green,yellow,blue,red,black);
     margin: 0;
@@ -221,6 +226,9 @@ section:nth-of-type(3n + 1) .landing__container::after {
     animation: rotate 5s linear 0s infinite forwards reverse;
 }
 
+/* anchor styles */
+/* Revised link styles to better act as navigational buttons */
+
 a:link, a:visited {
     text-decoration: none;
     font-size: 1.6em;
@@ -262,6 +270,7 @@ a:active {
     color: #fff;
 }
 }
+
 /* Section Active Styles Keyframe Animations */
 @keyframes rotate {
 	from {
@@ -283,6 +292,7 @@ a:active {
     }
 }
 
+/* Include suggestion for scroll to top button */
 .top {
     opacity: .5;
     border: 1px solid #555;

@@ -1,0 +1,19 @@
+{
+  "name": "projecttwo",
+  "version": "1.0.0",
+  "description": "Udacity FEND Landing Page",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrLordBrown/projectTwo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrLordBrown/projectTwo/issues"
+  },
+  "homepage": "https://github.com/MrLordBrown/projectTwo#readme"
+}
