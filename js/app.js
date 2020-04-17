@@ -22,20 +22,14 @@
 const navList = document.getElementById("navbar__list");
 const secs = document.querySelectorAll("section");
 const navMenu = document.querySelector(".navbar__menu");
-let coords;
-let coordsX;
-let coordsY;
-   
+let anchors = document.querySelectorAll("a");
+
 /**
  * End Global Variables
  * Start Helper Functions
  * 
  */
-function getCoords(el) {
-     	coords = el.getBoundingClientRect();
-	coordsX = coords.left;
-	coordsY = coords.top;
-    }
+
 /**
  * End Helper Functions
  * Begin Main Functions
@@ -56,15 +50,18 @@ function addItems() {
     }
 }
 
-function scrollIt(e) {
-    let whoDid = e.currentTarget;
-    whoDid.className = "active";
-    getCoords(e);
-    const whereY = coordsY + window.pageYOffset;
-    const whereX = coordsX + window.pageXOffset;
-    window.scrollTo(
-	{top: whereY, behavior: "smooth"}
-    )
+function makeActive() {
+    for(let i = 0; i < secs.length; i++) {
+	window.addEventListener("scroll", function(){
+	    let whereDat = secs[i].getBoundingClientRect();
+	    if (whereDat.top + 64 > 0) {
+		secs[i].className = "act";
+	    } else {
+		secs[i].className= "";
+	    }
+	}
+				);
+    }
 }
 // build the nav
 
@@ -81,16 +78,9 @@ function scrollIt(e) {
  * 
 */
 
-document.addEventListener('DOMContentLoaded', addItems); 
-let anchors = document.querySelectorAll('a');
-anchors.forEach(addEvent);
-
-function addEvent() {
-    anchors.addEventListener('click', scrollIt);
-}
+document.addEventListener('DOMContentLoaded', addItems);
+document.addEventListener('DOMContentLoaded', makeActive);
 // Build menu 
 // Scroll to section on link click
 
 // Set sections as active
-
-
