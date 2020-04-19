@@ -2,8 +2,8 @@
  *
  * CSS written based on SMACSS architecture.
  * To learn more, visit: http://smacss.com/
- * 
- * For simplicity, no reset or normalize is added. 
+ *
+ * For simplicity, no reset or normalize is added.
  * To learn more, visit: https://css-tricks.com/reboot-resets-reasoning/
  *
 */
@@ -34,7 +34,7 @@ h1 {
 @media only screen and (min-width: 35em){
     h1 {
 	font-size: 4em;
-        margin: 2em 2rem 1em;
+	margin: 2em 2rem 1em;
     }
 }
 
@@ -139,15 +139,15 @@ section {
 
 @media only screen and (min-width: 35em){
     .landing__container {
-        max-width: 100%;
-        padding: 4em;
+	max-width: 100%;
+	padding: 4em;
     }
 }
 
 section:nth-of-type(even) .landing__container {
     margin-right: 0;
     margin-left: auto;
-    text-align: right; 
+    text-align: right;
 }
 
 /* Background Circles */
@@ -275,22 +275,23 @@ a:active {
 @keyframes rotate {
 	from {
 		transform: rotate(0deg)
-		           translate(-1em)
-		           rotate(0deg);
+			   translate(-1em)
+			   rotate(0deg);
 	}
 	to {
 		transform: rotate(360deg)
-		           translate(-1em) 
-		           rotate(-360deg);
+			   translate(-1em)
+			   rotate(-360deg);
 	}
 }
 
 @media only screen and (min-width: 35em) {
-    
+/*
     .bye {
 	display: none;
     }
 }
+*/
 
 /* Include suggestion for scroll to top button */
 .top {
@@ -316,14 +317,14 @@ a:active {
 
 
 @media only screen and (min-width: 35em) {
-    
+
     .show {
 	display: flex;
 	justify-items: center;
 	align-items: center;
 	justify-content: center;
     }
-    
+
     .noshow {
 	display: none;
     }

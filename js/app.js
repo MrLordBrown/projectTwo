@@ -1,16 +1,16 @@
 /**
- * 
+ *
  * Manipulating the DOM exercise.
  * Exercise programmatically builds navigation,
  * scrolls to anchors from navigation,
  * and highlights section in viewport upon scrolling.
- * 
+ *
  * Dependencies: None
- * 
+ *
  * JS Version: ES2015/ES6
- * 
+ *
  * JS Standard: ESlint
- * 
+ *
 */
 
 /**
@@ -19,26 +19,23 @@
 
 const navList = document.getElementById('navbar__list');
 const secs = document.querySelectorAll('section');
-const navMenu = document.querySelector('.navbar__menu');
-let anchors = document.querySelectorAll('a');
 const heady = document.querySelector('.page__header');
-const footy = document.querySelector('.page_footer');
 const toppy = document.querySelector('.top');
 
 /**
  * End Global Variables
 
  * Start Helper Functions
- * 
+ *
  */
 
 
 
 /**
  * End Helper Functions
- 
+
  * Begin Main Functions
- * 
+ *
  */
 
 // build the nav and scroll to anchors
@@ -73,23 +70,24 @@ function makeActive() {
 				toppy.classList.remove('show');
 				toppy.classList.add('noshow');
 	    }
-	    setTimeout(function(){
-				heady.className = 'page__header bye';
-				toppy.classList.remove('show');
-				toppy.classList.add('noshow');
-	    }, 3000);
+	    /*	    setTimeout(function(){
+		    heady.className = 'page__header bye';
+		    toppy.classList.remove('show');
+		    toppy.classList.add('noshow');
+		    }, 3000);
+	    */
 		}
-			       );	    
+			       );
 	}
 }
 
 /**
  * End Main Functions
-
+ 
  * Begin Events
- * 
-*/
-			  
+ *
+ */
+
 // Build menu and scrolling
 document.addEventListener('DOMContentLoaded', addItems);
 
@@ -97,6 +95,9 @@ document.addEventListener('DOMContentLoaded', addItems);
 document.addEventListener('DOMContentLoaded', makeActive);
 
 // Suggestion: Navigation hides and reappears on scroll and mousemove
-document.addEventListener('mousemove', function(){
-	heady.className='page__header';
-});
+
+/*
+  document.addEventListener('mousemove', function(){
+  heady.className='page__header';
+  });
+*/
